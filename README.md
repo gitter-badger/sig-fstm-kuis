@@ -1,2 +1,3 @@
 # sig-fstm
-sig-fstm website
+
+website for [sig](sig-fstm.rhcloud.com) group FSTM in KUIS.
