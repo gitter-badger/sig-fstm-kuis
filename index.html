@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/SIG4.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/sig.css">
+    <title>SIG</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-wrapper color">
+            <ul id="slide-out" class="side-nav" style="transform: translateX(0px);">
+                <li><a href="#intro"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="#activity"><i class="material-icons">timeline</i>Activity</a></li>
+                <li><a href="#ourProgress"><i class="material-icons">share</i>Follow</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse black-text"><i class="material-icons">menu</i></a>
+            <div class="sig-hide">
+                <a href="#" class="brand-logo"><img src="img/SIG4.png" height="40" width="auto"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!--<li><a href="#intro">Home</a></li>-->
+                    <li><a href="#home">SIG</a></li>
+                    <li><a href="#activity">Activity</a></li>
+                    <li><a href="#ourProgress">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="intro" class="valign-wrapper center sig-sec section container scrollspy">
+        <div class="sig-width sig-margin">
+            <img src="img/pmfstm.png">
+            <img src="img/SIG4.png">
+            <img src="img/kuis.png">
+            <h1>PMFSTM | SIG | KUIS</h1>
+            <h5>- Persatuan Mahasiswa Fakulti Sains Teknologi Maklumat -</h5>
+            <h5>- Special Interest Group -</h5>
+            <h5>- Kolej Universiti Islam Antarabangsa Selangor -</h5>
+        </div>
+    </div>
+    <div id="sig-nav" class="valign-wrapper center sig-sec section">
+        <div id="home" class="sig-width sig-margin scrollspy ncontainer">
+            <img src="img/SIG4.png">
+            <h1>Under SIG we have</h1>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card black">
+                        <div class="white-text">
+                            <h1>OpsClub</h1>
+                            <p>Linux - </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card black">
+                        <div class="white-text">
+                            <h1>DevClub</h1>
+                            <p>Laravel - Android Studio - Yii - Material Design - Wordpress - Bootstrap - Drupal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card black">
+                        <div class="white-text">
+                            <h1>SecClub</h1>
+                            <p>Python - Sqlmap - Perl - Metasploit - Apktool - Wireshark </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="valign-wrapper center sig-sec container">
+        <div id="activity" class="sig-width section scrollspy">
+            <h1>Activity</h1>
+            <div class="row">
+                <div class="col s12 m8">
+                    <div class="card customw">
+                        <div class="black-text">
+                            <a class="modal-trigger black" href="#modal1">
+                                <blockquote>
+                                    <h1>Hax-It Competition 2.0</h1>
+                                    <p>8 Sept 2016</p>
+                                </blockquote>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card customw">
+                        <div class="black-text sig-hiden">
+                            <h5>twitter</h5>
+                            <a class="twitter-timeline" data-height="400" href="https://twitter.com/sig_fstm">Tweets by sig_fstm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="valign-wrapper center sig-sec grad">
+        <div id="ourProgress" class="sig-width section scrollspy">
+            <h1>Follow us</h1>
+            <a><img src="icons/github-social-media-128.png"></a>
+            <a><img src="icons/twitter-social-media-128.png"></a>
+            <div class="sig-footerM">
+                <p>Development for this website is still in progress</p>
+            </div>
+        </div>
+    </div>
+    <div class="sig-footer">
+        <p>Development for this website is still in progress</p>
+    </div>
+    <div class="global-overlay" style="opacity: 1; transform: translateX(100%);">
+        <canvas id="constellationel" width="1366" height="675"></canvas>
+    </div>
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Hax-It 2016_2.0 Competition</h4>
+            <p>Forensics hacking competition</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        $(document).scroll(function(){ 
+        var scroll_start = 0;
+        var startchange = $('#sig-nav');
+        var offset = startchange.offset();
+            scroll_start = $(this).scrollTop();
+            if(scroll_start > offset.top) {
+          $('#navbar').css({"background-color": "white", "box-shadow":"0 8px 17px 0 rgba(0, 0, 0, 0.2)", "-webkit-transition": "opacity 1s ease-in-out"});
+       } else {
+          $('#navbar').css({"background-color": "transparent", "box-shadow":"none"});
+       }
+    });
+    </script>
+    <script async src="js/widgets.js" charset="utf-8"></script>
+    <script src="js/constellationel.js"></script>
+</body>
+
+</html>
