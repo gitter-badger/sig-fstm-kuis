@@ -152,4 +152,18 @@
         });
         $('.collapsible').collapsible();
     });
+
+    $(document).scroll(function () {
+        var scroll_start = 0;
+        var startchange = $('#sig-nav');
+        var offset = startchange.offset();
+        scroll_start = $(this).scrollTop();
+        if (scroll_start > offset.top) {
+            $('#navbar').removeClass("jnavif");
+            $('#navbar').addClass("jnavel");
+        } else {
+            $('#navbar').addClass("jnavif");
+            $('#navbar').removeClass("jnavel");
+        }
+    });
 })(jQuery); // end of jQuery name space
